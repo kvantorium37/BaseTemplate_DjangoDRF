@@ -6,6 +6,7 @@ import json
 import random
 import string
 
+from django.contrib.auth import get_user_model
 from rest_framework import status
 from rest_framework.test import APIClient
 from rest_framework_simplejwt.tokens import RefreshToken
@@ -34,7 +35,7 @@ class DRFClient(APIClient):
     def _create_user(self):
         """Create test user."""
         user = self.mixer.blend(
-            'users.User', is_active=True, phone='+79012345678',
+            get_user_model(),
         )
         random_chars = [random.choice(string.hexdigits) for _ in range(0, 6)]  # noqa: S311
         self.password = ''.join(random_chars)
