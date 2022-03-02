@@ -17,4 +17,5 @@ INSTALLED_APPS = [
     'django_filters',
 
     # apps
+    'tasks',
 ]
