@@ -34,7 +34,7 @@ class TasksViewSet(viewsets.ModelViewSet):
 class UserViewSet(viewsets.ModelViewSet):
     """Users viewset."""
 
-    queryset = get_user_model().objects.all()
+    queryset = get_user_model().objects.all().order_by('id')
 
     serializer_class = tasks_serializers.UserSerializer
     http_method_names = ['get', 'options']
