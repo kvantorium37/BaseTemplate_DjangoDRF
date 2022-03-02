@@ -12,4 +12,4 @@ class HomepageView(APIView):
 
     def get(self, request: HttpRequest) -> Response:
         """Return simple http response."""
-        return Response('KvantKeys API')
+        return Response('My API')

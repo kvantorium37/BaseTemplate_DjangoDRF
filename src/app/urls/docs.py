@@ -9,7 +9,7 @@ def get_api_docs_urls(api_version):
     """Generate docs urls for concrete API version."""
     schema_view = get_schema_view(
         openapi.Info(
-            title='KvantKeys API',
+            title='My API',
             default_version=api_version,
         ),
         public=True,
