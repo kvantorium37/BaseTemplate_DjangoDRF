@@ -18,3 +18,6 @@ Basic template to fork from while creating Django REST API applications.
 - Configured separated and versioned API urls
 - Custom request-logging middleware
 - Custom pagination class, able to vary `page_size` parameter
+- Configured linters
+- Configured tests using `pytest`
+- Makefile to quickly run linters and tests
